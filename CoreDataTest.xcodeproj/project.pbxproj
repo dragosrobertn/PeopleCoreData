@@ -205,13 +205,16 @@
 				TargetAttributes = {
 					156A964F2116230F00BF4497 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					156A96662116231200BF4497 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 156A964F2116230F00BF4497;
 					};
 					156A96712116231200BF4497 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 156A964F2116230F00BF4497;
 					};
 				};
@@ -455,7 +458,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dragosneagu.CoreDataTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -473,7 +476,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dragosneagu.CoreDataTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -493,7 +496,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dragosneagu.CoreDataTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoreDataTest.app/CoreDataTest";
 			};
@@ -514,7 +517,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dragosneagu.CoreDataTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoreDataTest.app/CoreDataTest";
 			};
@@ -534,7 +537,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dragosneagu.CoreDataTestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CoreDataTest;
 			};
@@ -554,7 +557,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dragosneagu.CoreDataTestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CoreDataTest;
 			};
