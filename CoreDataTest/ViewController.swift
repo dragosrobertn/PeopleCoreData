@@ -66,7 +66,7 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController : UITableViewDataSource {
+extension ViewController : UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -83,5 +83,37 @@ extension ViewController : UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let alert = UIAlertController(title: "Change person", message: nil, preferredStyle: .alert)
+        
+        alert.addTextField(configurationHandler: {(textfield) in
+            textfield.text! = self.people[indexPath.row].name!
+        })
+        
+        alert.addTextField(configurationHandler: {(textfield) in
+            textfield.text! = String(self.people[indexPath.row].age)
+            textfield.keyboardType = .numberPad
+        })
+        
+        let action = UIAlertAction(title: "Save", style: .default, handler: {(_) in
+            let name = alert.textFields?.first!.text!
+            let age = alert.textFields?.last!.text!
+      
+
+            self.people[indexPath.row].name = name
+            self.people[indexPath.row].age = Int16(age!)!
+            
+            PersistenceService.saveContext()
+            self.tableView.reloadData()
+        })
+        
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
 }
 
