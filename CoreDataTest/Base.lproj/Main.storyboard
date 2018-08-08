@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RWJ-NR-0D0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Core Data Example-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreDataTest" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,15 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gA7-MR-yY7">
-                                <rect key="frame" x="0.0" y="632" width="375" height="30"/>
-                                <state key="normal" title="Add Element"/>
-                                <connections>
-                                    <action selector="addElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DUJ-WI-ra2"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fI8-Gf-2cO">
-                                <rect key="frame" x="0.0" y="20" width="375" height="612"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="c3y-U1-D3t"/>
@@ -36,22 +29,46 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gA7-MR-yY7" firstAttribute="top" secondItem="fI8-Gf-2cO" secondAttribute="bottom" id="CUb-Ny-Bqc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fI8-Gf-2cO" secondAttribute="bottom" id="7pV-1J-hbp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fI8-Gf-2cO" secondAttribute="trailing" id="SNm-kS-mbA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gA7-MR-yY7" secondAttribute="bottom" constant="5" id="V0R-Cq-Nfr"/>
                             <constraint firstItem="fI8-Gf-2cO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b89-bN-1JG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gA7-MR-yY7" secondAttribute="trailing" id="d64-Qn-jbM"/>
                             <constraint firstItem="fI8-Gf-2cO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dh5-sv-9Px"/>
-                            <constraint firstItem="gA7-MR-yY7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nCz-Hl-Fmc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Core Data Example" id="HN9-zp-7tU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="cpL-Vw-oYT">
+                            <connections>
+                                <action selector="addElement:" destination="BYZ-38-t0r" id="DkZ-WJ-EBj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="fI8-Gf-2cO" id="SPa-7I-PYh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2556" y="89.505247376311857"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Hu5-4r-aCm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RWJ-NR-0D0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="lfh-3U-KhF"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b1M-Ah-1kf">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dmU-Qe-uce"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zlj-yB-Stl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1616.8" y="89.505247376311857"/>
         </scene>
     </scenes>
 </document>
